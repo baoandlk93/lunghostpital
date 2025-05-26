@@ -1,4 +1,3 @@
-import Example from "./Example";
 import HeaderSection from "./HeaderSection";
 import BentoGrid from "./BentoGrid";
 import MapComponent from "./MapComponent";
