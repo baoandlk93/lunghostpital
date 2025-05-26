@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+@keyframes ring {
+  0% { box-shadow: 0 0 0 0 #1976d244; }
+  80% { box-shadow: 0 0 0 12px #1976d200; }
+  100% { box-shadow: 0 0 0 0 #1976d200; }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* styles/Card.module.css */
+.header {
+    background-image: url('/img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    width: 100%;
+    color: #c91c1a;
+    padding: 16px;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  @media (max-width: 991px) {
+    .header {
+      display: none;
+    }
+  }
+
+  .p-carousel .p-carousel-item {
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
