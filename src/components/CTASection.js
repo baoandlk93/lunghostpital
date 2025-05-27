@@ -24,21 +24,21 @@ export default function CTASection() {
           </svg>
           <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
             <h2 className="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">
-              Boost your productivity. Start using our app today.
+              Bảo vệ sức khoẻ lá phổi của bạn ngay hôm nay
             </h2>
             <p className="mt-6 text-lg/8 text-pretty text-gray-300">
-              Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
-              Malesuada adipiscing sagittis vel nulla.
+              Bệnh viện Phổi tỉnh Khánh Hòa cam kết mang đến cho bệnh nhân chất
+              lượng dịch vụ tốt nhất.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a
                 href="#"
                 className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                Get started
+                Đặt lịch khám
               </a>
               <a href="#" className="text-sm/6 font-semibold text-white">
-                Learn more <span aria-hidden="true">→</span>
+                Tìm hiểu thêm <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>

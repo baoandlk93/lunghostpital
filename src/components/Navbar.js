@@ -8,6 +8,7 @@ import { GrGroup } from "react-icons/gr";
 import { FaNewspaper } from "react-icons/fa6";
 import { FaCalendar } from "react-icons/fa6";
 import { FaMoneyBill } from "react-icons/fa6";
+
 export default function Navbar() {
   const router = useRouter();
 
@@ -26,7 +27,10 @@ export default function Navbar() {
           {
             label: "Tổ chức bệnh viện",
             items: [
-              { label: "Cơ cấu tổ chức", command: () => router.push("/about") },
+              {
+                label: "Cơ cấu tổ chức",
+                command: () => router.push("/about/organizational-structure"),
+              },
             ],
           },
         ],
@@ -36,35 +40,35 @@ export default function Navbar() {
             items: [
               {
                 label: "Khoa Lao Hô Hấp",
-                command: () => router.push("/about"),
+                command: () => router.push("/about/lao-ho-hap"),
               },
               {
                 label: "Khoa Lao ngoài phổi và bệnh phổi",
-                command: () => router.push("/about"),
+                command: () => router.push("/about/laonhaophoi"),
               },
               {
                 label: "Khoa Khám hồi sức cấp cứu",
-                command: () => router.push("/about"),
+                command: () => router.push("/about/khamsucrecapcuu"),
               },
               {
                 label: "Khoa Dược - CLS",
-                command: () => router.push("/about"),
+                command: () => router.push("/about/duoccls"),
               },
               {
                 label: "Phòng Kế hoạch tổng hợp - Chỉ đạo tuyến",
-                command: () => router.push("/about"),
+                command: () => router.push("/about/ketoanthanhnhachuyen"),
               },
               {
                 label: "Phòng Điều dưỡng - Dinh dưỡng - KSNK",
-                command: () => router.push("/about"),
+                command: () => router.push("/about/dieuduong"),
               },
               {
                 label: "Phòng Tổ chức hành chính",
-                command: () => router.push("/about"),
+                command: () => router.push("/about/totuchoihanachuyen"),
               },
               {
                 label: "Phòng Tài chính kế toán",
-                command: () => router.push("/about"),
+                command: () => router.push("/about/taike"),
               },
             ],
           },
@@ -82,45 +86,11 @@ export default function Navbar() {
       items: [
         [
           {
-            label: "Football",
+            label: "Tin tức",
             items: [
-              { label: "Kits" },
-              { label: "Shoes" },
-              { label: "Shorts" },
-              { label: "Training" },
-            ],
-          },
-        ],
-        [
-          {
-            label: "Running",
-            items: [
-              { label: "Accessories" },
-              { label: "Shoes" },
-              { label: "T-Shirts" },
-              { label: "Shorts" },
-            ],
-          },
-        ],
-        [
-          {
-            label: "Swimming",
-            items: [
-              { label: "Kickboard" },
-              { label: "Nose Clip" },
-              { label: "Swimsuits" },
-              { label: "Paddles" },
-            ],
-          },
-        ],
-        [
-          {
-            label: "Tennis",
-            items: [
-              { label: "Balls" },
-              { label: "Rackets" },
-              { label: "Shoes" },
-              { label: "Training" },
+              { label: "Tin tức tổng hợp" },
+              { label: "Tin tức bệnh viện" },
+              { label: "Hướng dẫn thực hiện các thủ tục" },
             ],
           },
         ],
@@ -132,45 +102,11 @@ export default function Navbar() {
       items: [
         [
           {
-            label: "Football",
+            label: "Đoàn thể",
             items: [
-              { label: "Kits" },
-              { label: "Shoes" },
-              { label: "Shorts" },
-              { label: "Training" },
-            ],
-          },
-        ],
-        [
-          {
-            label: "Running",
-            items: [
-              { label: "Accessories" },
-              { label: "Shoes" },
-              { label: "T-Shirts" },
-              { label: "Shorts" },
-            ],
-          },
-        ],
-        [
-          {
-            label: "Swimming",
-            items: [
-              { label: "Kickboard" },
-              { label: "Nose Clip" },
-              { label: "Swimsuits" },
-              { label: "Paddles" },
-            ],
-          },
-        ],
-        [
-          {
-            label: "Tennis",
-            items: [
-              { label: "Balls" },
-              { label: "Rackets" },
-              { label: "Shoes" },
-              { label: "Training" },
+              { label: "Hoạt động công đoàn" },
+              { label: "Hội nghị, hội thảo" },
+              { label: "Thư viện ảnh" },
             ],
           },
         ],
@@ -182,46 +118,8 @@ export default function Navbar() {
       items: [
         [
           {
-            label: "Football",
-            items: [
-              { label: "Kits" },
-              { label: "Shoes" },
-              { label: "Shorts" },
-              { label: "Training" },
-            ],
-          },
-        ],
-        [
-          {
-            label: "Running",
-            items: [
-              { label: "Accessories" },
-              { label: "Shoes" },
-              { label: "T-Shirts" },
-              { label: "Shorts" },
-            ],
-          },
-        ],
-        [
-          {
-            label: "Swimming",
-            items: [
-              { label: "Kickboard" },
-              { label: "Nose Clip" },
-              { label: "Swimsuits" },
-              { label: "Paddles" },
-            ],
-          },
-        ],
-        [
-          {
-            label: "Tennis",
-            items: [
-              { label: "Balls" },
-              { label: "Rackets" },
-              { label: "Shoes" },
-              { label: "Training" },
-            ],
+            label: "Cải cách hành chính",
+            items: [{ label: "Hướng dẫn làm các thủ tục" }],
           },
         ],
       ],
@@ -237,14 +135,26 @@ export default function Navbar() {
       command: () => router.push("/booking"),
     },
   ];
+  const style = {
+    "p-megamenu": {
+      background: "linear-gradient(to right, #2563eb, #7c3aed)",
+      color: "#fff",
+      border: "none",
+    },
 
+    /* Đổi màu text của menu items */
+    "p-megamenu .p-menuitem-text": {
+      color: "#fff !important",
+    },
+
+    /* Đổi màu hover */
+    "p-megamenu .p-menuitem:hover": {
+      background: "rgba(255, 255, 255, 0.1) !important",
+    },
+  };
   return (
     <div className="card">
-      <MegaMenu
-        model={items}
-        breakpoint="960px"
-        style={{ width: "100%", backgroundColor: "#blue" }}
-      />
+      <MegaMenu model={items} breakpoint="960px" style={style} />
     </div>
   );
 }

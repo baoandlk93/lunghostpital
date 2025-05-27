@@ -14,11 +14,18 @@ export default function Footer() {
           Trang, Tỉnh Khánh Hòa.
         </p>
         <p>
-          Điện thoại: 0258.3838689 - Fax: 0258.3542883. Email: bvlbpkh@gmail.com
+          Điện thoại: 0258.3838689 - Fax: 0258.3542883. Email:
+          bvlp.syt@khanhhoa.gov.vn
         </p>
         <p>Hotline: 0965351515 - 0949699191</p>
         <p>
           Chịu trách nhiệm nội dung: BS CKI. Huỳnh Minh Tâm - Giám đốc Bệnh viện
+        </p>
+        <p>
+          Desgin by:{" "}
+          <a href="https://github.com/anhha">
+            Hà Bảo Ân - Phòng IT Bệnh viện Phổi tỉnh Khánh Hòa
+          </a>
         </p>
       </section>
     </footer>

@@ -1,197 +1,105 @@
 import React from "react";
 import Layout from "@/components/Layout";
-
+import { BreadCrumb } from "primereact/breadcrumb";
+import Link from "next/link";
+import { Divider } from "primereact/divider";
+import { Button } from "primereact/button";
 export default function About() {
-  const groups = [
-    {
-      group: "BAN GIÁM ĐỐC BỆNH VIỆN",
-      members: [
-        {
-          name: "BS CK1. Huỳnh Minh Tâm",
-          position: "Giám đốc Bệnh viện",
-          phone: "02583.838689",
-        },
-      ],
-    },
-    {
-      group: "CÁC KHOA PHÒNG TRỰC THUỘC",
-      subGroups: [
-        {
-          subGroup: "PHÒNG KHTH-CDT",
-          members: [
-            {
-              name: "ThS.BS. Trần Văn Trung",
-              position: "Phó phòng",
-              phone: "02583.838010",
-            },
-            {
-              name: "CN. Phan Thị Thường",
-              position: "Phó phòng",
-              phone: "02583.830557",
-            },
-          ],
-        },
-        {
-          subGroup: "PHÒNG ĐIỀU DƯỠNG - DINH DƯỠNG - KSNK",
-          members: [
-            {
-              name: "CN. An Đình Quang",
-              position: "Phó phòng",
-              phone: "02583.834954",
-            },
-          ],
-        },
-        {
-          subGroup: "PHÒNG TỔ CHỨC HÀNH CHÍNH",
-          members: [
-            {
-              name: "ThS. Đinh Thị Ngọc Huệ",
-              position: "Trưởng phòng",
-              phone: "02583.838728",
-            },
-            {
-              name: "DS. Võ Phan Quỳnh Quyên",
-              position: "Phó phòng",
-              phone: "02583.838728",
-            },
-          ],
-        },
-        {
-          subGroup: "PHÒNG TÀI CHÍNH KẾ TOÁN",
-          members: [
-            {
-              name: "CN. Nguyễn Thị Diệu Thúy",
-              position: "Phó phòng",
-              phone: "02583.832175",
-            },
-            {
-              name: "CN. Hoàng Thị Bích An",
-              position: "Phó phòng",
-              phone: "02583.832175",
-            },
-          ],
-        },
-        {
-          subGroup: "KHOA DƯỢC – CLS",
-          members: [
-            {
-              name: "CN. Hoàng Bá Đạo",
-              position: "Phó khoa",
-              phone: "02583.540891",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      group: "KHOA KHÁM – HSCC",
-      members: [
-        {
-          name: "BS CK1. Nguyễn Thị Mỹ Dung",
-          position: "Trưởng khoa",
-          phone: "02583.834952",
-        },
-        {
-          name: "BS CK1. Huỳnh Trí Nam",
-          position: "Phó khoa",
-          phone: "02583.834952",
-        },
-      ],
-    },
-    {
-      group: "KHOA LAO HÔ HẤP",
-      members: [
-        {
-          name: "BS CK1. Nguyễn Thị Lệ",
-          position: "Trưởng khoa",
-          phone: "02583.835856",
-        },
-      ],
-    },
-    {
-      group: "KHOA LAO NGOÀI PHỔI VÀ BỆNH PHỔI",
-      members: [
-        {
-          name: "ThS.BS. Nguyễn Đắc Dy",
-          position: "Trưởng khoa",
-          phone: "02583.543772",
-        },
-      ],
-    },
-  ];
-
   return (
     <Layout>
-      <div className="max-w-3xl mx-auto py-4">
-        <h2 className="text-2xl font-bold text-center mb-6">CƠ CẤU TỔ CHỨC</h2>
-        <table className="w-full border border-black text-sm">
-          <thead>
-            <tr className="bg-blue-100 text-center">
-              <th className="border border-black p-2 w-12">STT</th>
-              <th className="border border-black p-2">Họ và tên</th>
-              <th className="border border-black p-2">Chức vụ</th>
-              <th className="border border-black p-2">Ghi chú</th>
-            </tr>
-          </thead>
-          <tbody>
-            {groups.map((group, idx) => (
-              <React.Fragment key={group.group}>
-                <tr>
-                  <td
-                    colSpan={4}
-                    className="border border-black text-center font-bold bg-gray-200 p-2 uppercase"
-                  >
-                    {group.group}
-                  </td>
-                </tr>
-                {/* Nếu có subgroup thì render subgroup, nếu không render members luôn */}
-                {group.subGroups
-                  ? group.subGroups.map((sub, subIdx) => (
-                      <React.Fragment key={sub.subGroup}>
-                        <tr>
-                          <td
-                            colSpan={4}
-                            className="border border-black text-left font-semibold bg-gray-100 p-2 pl-6 uppercase"
-                          >
-                            {sub.subGroup}
-                          </td>
-                        </tr>
-                        {sub.members.map((mem, i) => (
-                          <tr key={i}>
-                            <td className="border border-black p-2 text-center">
-                              {i + 1}
-                            </td>
-                            <td className="border border-black p-2">
-                              {mem.name}
-                            </td>
-                            <td className="border border-black p-2">
-                              {mem.position}
-                            </td>
-                            <td className="border border-black p-2">
-                              SDT: {mem.phone}
-                            </td>
-                          </tr>
-                        ))}
-                      </React.Fragment>
-                    ))
-                  : group.members.map((mem, i) => (
-                      <tr key={i}>
-                        <td className="border border-black p-2 text-center">
-                          {i + 1}
-                        </td>
-                        <td className="border border-black p-2">{mem.name}</td>
-                        <td className="border border-black p-2">
-                          {mem.position}
-                        </td>
-                        <td className="border border-black p-2">
-                          SDT: {mem.phone}
-                        </td>
-                      </tr>
-                    ))}
-              </React.Fragment>
-            ))}
-          </tbody>
-        </table>
+      <BreadCrumb
+        model={[
+          { label: "Trang chủ", url: "/" },
+          { label: "Giới thiệu", url: "/about" },
+        ]}
+      />
+      <div className="container mx-auto p-2">
+        <h1 className="text-2xl font-bold text-center">Giới thiệu</h1>
+        <p className="text-start">
+          Bệnh viện Lao và Bệnh Phổi Khánh Hòa được thành lập và đi vào hoạt
+          động từ tháng 6 năm 2000 với quy mô 50 giường bệnh nội trú, 42 nhân
+          sự, trang thiết bị còn rất đơn sơ. Trải qua 24 năm hình thành và phát
+          triển, nhờ sự nỗ lực phấn đấu của tập thể, đặc biệt là sự quan tâm,
+          lãnh đạo, chỉ đạo, hỗ trợ của UBND tỉnh và các sở, ban, ngành, đến
+          nay, Bệnh viện đã có quy mô 150 giường bệnh với 03 khoa lâm sàng, 01
+          khoa Dược-CLS-CNK và 04 phòng chức năng.
+        </p>
+        <p className="text-start">
+          Không chỉ vậy, đơn vị đã dần có đầy đủ trang thiết bị hiện đại như:
+          Máy giúp thở, Monitor theo dõi bệnh nhân, máy nội soi phế quản, máy đo
+          chức năng hô hấp,… Đồng thời, được hỗ trợ nhiều trang thiết bị y tế từ
+          nguồn lực Chương trình chống lao Quốc gia gồm máy xét nghiệm lao và
+          lao kháng thuốc bằng phương pháp sinh học phân tử hiện đại nhất hiện
+          nay (Gene Xpert), máy nuôi cấy MGIT 960, máy X - quang cố định, máy X
+          - quang di động, xe chụp phim X - quang kỹ thuật số lưu động, kính
+          hiển vi sinh học huỳnh quang,… “Hàng năm, Bệnh viện đã phát hiện, chẩn
+          đoán và điều trị khỏi cho khoảng 1.500 bệnh nhân trong toàn tỉnh.
+          Trong 6 tháng đầu năm 2024, số lượt khám bệnh 16.818 lượt, đạt 156,4%
+          so với kế hoạch và tăng 10% so với cùng kỳ; tổng số bệnh nhân lao quản
+          lý đạt 196,0% so với kế hoạch giao, tăng 34,0% so với cùng kỳ; tỷ lệ
+          khỏi và hoàn thành điều trị đạt so với kế hoạch của Chương trình Chống
+          lao Quốc gia, tăng 8,1% so với cùng kỳ. Chương trình Chống lao tỉnh đã
+          và đang thực hiện tốt các hoạt động phòng, chống lao theo chỉ đạo của
+          Chương trình Chống lao Quốc gia.
+        </p>
+      </div>
+      <Divider />
+      <div className="card flex justify-content-center gap-4 items-start justify-center">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-2xl font-bold">Cơ cấu tổ chức</h2>
+          <a href="/about/organizational-structure" className="text-blue-500">
+            Xem chi tiết
+          </a>
+        </div>
+        <Divider layout="vertical" />
+        <div className="flex flex-col gap-2">
+          <h2 className="text-2xl font-bold">Khoa phòng</h2>
+          <ul>
+            <li>
+              <Link href="/about/lao-ho-hap" className="text-blue-500">
+                Khoa lao hô hấp
+              </Link>
+            </li>
+            <li>
+              <Link href="/about/laonhaophoi" className="text-blue-500">
+                Khoa lao ngoài phổi và bệnh phổi
+              </Link>
+            </li>
+            <li>
+              <Link href="/about/khamsucrecapcuu" className="text-blue-500">
+                Khoa khám hồi sức cấp cứu
+              </Link>
+            </li>
+            <li>
+              <Link href="/about/duoccls" className="text-blue-500">
+                Khoa Dược - CLS
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about/ketoanthanhnhachuyen"
+                className="text-blue-500"
+              >
+                Phòng Kế hoạch tổng hợp - Chỉ đạo tuyến
+              </Link>
+            </li>
+            <li>
+              <Link href="/about/dieuduong" className="text-blue-500">
+                Phòng Điều dưỡng - Dinh dưỡng - KSNK
+              </Link>
+            </li>
+            <li>
+              <Link href="/about/totuchoihanachuyen" className="text-blue-500">
+                Phòng Tổ chức hành chính
+              </Link>
+            </li>
+            <li>
+              <Link href="/about/taike" className="text-blue-500">
+                Phòng Tài chính kế toán
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </Layout>
   );

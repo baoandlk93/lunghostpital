@@ -10,8 +10,8 @@ const messengerLink = "https://m.me/yourpageid"; // Thay bằng link messenger p
 // CSS in JS hoặc import file css riêng nếu muốn
 const widgetStyle = {
   position: "fixed",
-  left: 24,
-  bottom: 24,
+  right: 24,
+  bottom: 100,
   zIndex: 9999,
   display: "flex",
   flexDirection: "column",

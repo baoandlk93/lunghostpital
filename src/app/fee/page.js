@@ -1,7 +1,7 @@
 "use client";
 import Layout from "@/components/Layout";
 import { useState } from "react";
-
+import { BreadCrumb } from "primereact/breadcrumb";
 const pdfOptions = [
   { label: "Quyết định", url: "/files/quyet-dinh-gia.pdf" },
   { label: "Bảng giá", url: "/files/gia.pdf" },
@@ -10,6 +10,9 @@ export default function FeePage() {
   const [selectedPdf, setSelectedPdf] = useState(pdfOptions[0]);
   return (
     <Layout>
+      <BreadCrumb
+        model={[{ label: "Trang chủ", url: "/" }, { label: "Bảng giá" }]}
+      />
       <div className="flex h-screen">
         {/* Sidebar */}
         <div className="w-48 bg-gray-100 border-r px-4 py-6">

@@ -50,3 +50,20 @@ body {
     margin: 0 !important;
     padding: 0 !important;
   }
+
+  .p-menubar {
+    background: linear-gradient(to right, #2563eb, #7c3aed) !important;
+    color: #fff !important;
+    border: none !important;
+  }
+  
+  /* Đổi màu text của menu items */
+  .p-menubar .p-menuitem-text {
+    color: #fff !important;
+  }
+  
+  /* Đổi màu hover */
+  .p-menubar .p-menuitem:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+  

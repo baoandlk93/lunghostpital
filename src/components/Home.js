@@ -4,6 +4,7 @@ import MapComponent from "./MapComponent";
 import PricingSection from "./PricingSection";
 import CTASection from "./CTASection";
 import { ScrollTop } from "primereact/scrolltop";
+import Example from "./Example";
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-4 ">

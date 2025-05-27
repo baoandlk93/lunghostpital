@@ -6,6 +6,7 @@ import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { Calendar } from "primereact/calendar";
 import { useState } from "react";
+import { BreadCrumb } from "primereact/breadcrumb";
 export default function Booking() {
   const [visible, setVisible] = useState(false);
   const [value, setValue] = useState({
@@ -22,6 +23,13 @@ export default function Booking() {
 
   return (
     <Layout>
+      <BreadCrumb
+        model={[
+          { label: "Trang chủ", url: "/" },
+          { label: "Đặt lịch khám", url: "/booking" },
+          { label: "Hướng dẫn đặt lịch" },
+        ]}
+      />
       <div className="flex justify-center gap-2 p-4 border border-gray-200 rounded">
         <div className="flex flex-col gap-2 justify-start">
           <h1 className="text-2xl font-bold">
