@@ -3,11 +3,10 @@ import React from "react";
 import { FaPhone } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
 import { FaFacebookMessenger } from "react-icons/fa6";
-const phoneNumber = "0965351515"; // Không dấu chấm
-const zaloLink = "https://zalo.me/0965351515"; // Thay bằng link zalo phù hợp
-const messengerLink = "https://m.me/yourpageid"; // Thay bằng link messenger page bạn
+const phoneNumber = "0965351515";
+const zaloLink = "https://zalo.me/0965351515";
+const messengerLink = "https://m.me/yourpageid";
 
-// CSS in JS hoặc import file css riêng nếu muốn
 const widgetStyle = {
   position: "fixed",
   right: 24,

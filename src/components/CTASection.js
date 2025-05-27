@@ -26,10 +26,6 @@ export default function CTASection() {
             <h2 className="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">
               Bảo vệ sức khoẻ lá phổi của bạn ngay hôm nay
             </h2>
-            <p className="mt-6 text-lg/8 text-pretty text-gray-300">
-              Bệnh viện Phổi tỉnh Khánh Hòa cam kết mang đến cho bệnh nhân chất
-              lượng dịch vụ tốt nhất.
-            </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a
                 href="#"
@@ -37,18 +33,15 @@ export default function CTASection() {
               >
                 Đặt lịch khám
               </a>
-              <a href="#" className="text-sm/6 font-semibold text-white">
-                Tìm hiểu thêm <span aria-hidden="true">→</span>
-              </a>
             </div>
           </div>
           <div className="relative mt-16 h-80 lg:mt-8">
             <img
               alt="App screenshot"
-              src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+              src="/img/logo.jpg"
               width={1824}
               height={1080}
-              className="absolute top-0 left-0 w-228 max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+              className="rounded-[calc(var(--radius-lg)+100px)]"
             />
           </div>
         </div>

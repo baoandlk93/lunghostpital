@@ -5,11 +5,15 @@ import PricingSection from "./PricingSection";
 import CTASection from "./CTASection";
 import { ScrollTop } from "primereact/scrolltop";
 import Example from "./Example";
+import BasicDemo from "./BasicDemo";
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-4 ">
       <HeaderSection />
-      <CTASection />
+      <div className="flex gap-4">
+        <CTASection />
+        <BasicDemo />
+      </div>
       <BentoGrid />
       <PricingSection />
       <MapComponent />
