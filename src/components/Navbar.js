@@ -119,7 +119,12 @@ export default function Navbar() {
         [
           {
             label: "Cải cách hành chính",
-            items: [{ label: "Hướng dẫn làm các thủ tục" }],
+            items: [
+              {
+                label: "Hướng dẫn làm các thủ tục",
+                command: () => router.push("/instruct"),
+              },
+            ],
           },
         ],
       ],

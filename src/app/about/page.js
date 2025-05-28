@@ -13,9 +13,9 @@ export default function About() {
           { label: "Giới thiệu", url: "/about" },
         ]}
       />
-      <div className="container mx-auto p-2">
-        <h1 className="text-2xl font-bold text-center">Giới thiệu</h1>
-        <p className="text-start">
+      <div className="container mx-auto p-4">
+        <h1 className="text-4xl font-bold text-center mb-16">Giới thiệu</h1>
+        <p className="text-start px-32 mb-4">
           Bệnh viện Lao và Bệnh Phổi Khánh Hòa được thành lập và đi vào hoạt
           động từ tháng 6 năm 2000 với quy mô 50 giường bệnh nội trú, 42 nhân
           sự, trang thiết bị còn rất đơn sơ. Trải qua 24 năm hình thành và phát
@@ -24,7 +24,7 @@ export default function About() {
           nay, Bệnh viện đã có quy mô 150 giường bệnh với 03 khoa lâm sàng, 01
           khoa Dược-CLS-CNK và 04 phòng chức năng.
         </p>
-        <p className="text-start">
+        <p className="text-start px-32 mb-4">
           Không chỉ vậy, đơn vị đã dần có đầy đủ trang thiết bị hiện đại như:
           Máy giúp thở, Monitor theo dõi bệnh nhân, máy nội soi phế quản, máy đo
           chức năng hô hấp,… Đồng thời, được hỗ trợ nhiều trang thiết bị y tế từ
@@ -34,6 +34,8 @@ export default function About() {
           - quang di động, xe chụp phim X - quang kỹ thuật số lưu động, kính
           hiển vi sinh học huỳnh quang,… “Hàng năm, Bệnh viện đã phát hiện, chẩn
           đoán và điều trị khỏi cho khoảng 1.500 bệnh nhân trong toàn tỉnh.
+        </p>
+        <p className="text-start px-32 mb-4">
           Trong 6 tháng đầu năm 2024, số lượt khám bệnh 16.818 lượt, đạt 156,4%
           so với kế hoạch và tăng 10% so với cùng kỳ; tổng số bệnh nhân lao quản
           lý đạt 196,0% so với kế hoạch giao, tăng 34,0% so với cùng kỳ; tỷ lệ
