@@ -9,7 +9,7 @@ export default function Instruct() {
       id: 0,
       label:
         "Quyết định 281/QĐ-BVLBP ngày 14/11/2024 của Bệnh viện Lao và Bệnh phổi Khánh Hòa về việc ban hành Danh mục Quy trình chuyên môn kỹ thuật thực hiện tại Bệnh viện Lao và Bệnh phổi Khánh Hòa",
-      url: "/files/quyet-dinh/qd-281.pdf",
+      url: "/files/quyet-dinh/281.pdf",
     },
     { id: 1, label: "QĐ 15/QĐ-BVLBP", url: "/files/quyet-dinh/qd-15.pdf" },
     { id: 2, label: "QĐ 162/QĐ-BVLBP", url: "/files/quyet-dinh/QĐ-162.pdf" },

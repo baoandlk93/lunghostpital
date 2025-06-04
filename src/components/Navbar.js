@@ -88,9 +88,18 @@ export default function Navbar() {
           {
             label: "Tin tức",
             items: [
-              { label: "Tin tức tổng hợp" },
-              { label: "Tin tức bệnh viện" },
-              { label: "Hướng dẫn thực hiện các thủ tục" },
+              {
+                label: "Tin tức tổng hợp",
+                command: () => router.push("/news/general"),
+              },
+              {
+                label: "Tin tức bệnh viện",
+                command: () => router.push("/news/hospital"),
+              },
+              {
+                label: "Quy trình thanh toán viện phí",
+                command: () => router.push("/news/fee"),
+              },
             ],
           },
         ],
